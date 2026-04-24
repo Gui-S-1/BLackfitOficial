@@ -1,13 +1,13 @@
-ï»¿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title id="page-title">Carregandoâ€¦ â€” BLACKFIT Blog</title>
-  <meta name="description" content="Blog BLACKFIT â€” performance, treino e suplementaÃ§Ã£o.">
+  <title id="page-title">Carregando… — BLACKFIT Blog</title>
+  <meta name="description" content="Blog BLACKFIT — performance, treino e suplementação.">
   <meta property="og:type" content="article">
   <meta property="og:title" content="BLACKFIT Blog">
-  <meta property="og:description" content="Performance, treino e suplementaÃ§Ã£o.">
+  <meta property="og:description" content="Performance, treino e suplementação.">
   <meta property="og:image" content="">
   <meta property="og:url" content="">
   <meta name="twitter:card" content="summary_large_image">
@@ -21,11 +21,11 @@
 <header class="nav">
   <a href="index.html" class="brand"><img src="assets/IMG_6165.PNG" alt=""><span>BLACKFIT</span></a>
   <nav class="links">
-    <a href="index.html">InÃ­cio</a><a href="sobre.html">Sobre NÃ³s</a><a href="suplementos.html">Suplementos</a>
-    <a href="roupas.html">Roupas Elegance</a><a href="blog.html" class="active">Blog</a><a href="contato.html">LocalizaÃ§Ã£o</a>
+    <a href="index.html">Início</a><a href="sobre.html">Sobre Nós</a><a href="suplementos.html">Suplementos</a>
+    <a href="roupas.html">Roupas Elegance</a><a href="blog.html" class="active">Blog</a><a href="contato.html">Localização</a>
   </nav>
   <div class="cta">
-    <a href="https://wa.me/5562999999999" target="_blank" class="btn-zap green"><svg class="ic"><use href="#i-whatsapp"/></svg>Chamar no Zap</a>
+    <a href="https://wa.me/5562954410900" target="_blank" class="btn-zap green"><svg class="ic"><use href="#i-whatsapp"/></svg>Chamar no Zap</a>
     <a href="https://chat.whatsapp.com/SUBSTITUIR-PELO-LINK-DO-GRUPO" target="_blank" class="btn-vip"><svg class="ic"><use href="#i-crown"/></svg>Grupo VIP</a>
   </div>
   <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menu"><svg class="ic ic-lg"><use href="#i-menu"/></svg></button>
@@ -33,8 +33,8 @@
 
 <aside class="drawer" id="drawer">
   <span class="close" onclick="toggleMenu()"><svg class="ic ic-lg"><use href="#i-close"/></svg></span>
-  <a href="index.html">InÃ­cio</a><a href="sobre.html">Sobre</a><a href="suplementos.html">Suplementos</a>
-  <a href="roupas.html">Elegance</a><a href="blog.html">Blog</a><a href="contato.html">LocalizaÃ§Ã£o</a>
+  <a href="index.html">Início</a><a href="sobre.html">Sobre</a><a href="suplementos.html">Suplementos</a>
+  <a href="roupas.html">Elegance</a><a href="blog.html">Blog</a><a href="contato.html">Localização</a>
 </aside>
 
 <article class="post-page">
@@ -42,12 +42,12 @@
   <div class="post-body">
     <a href="blog.html" class="post-back"><svg class="ic"><use href="#i-arrow"/></svg> Voltar pro Blog</a>
     <span id="post-date" class="post-date"></span>
-    <h1 id="post-title">â€¦</h1>
+    <h1 id="post-title">…</h1>
     <p id="post-excerpt" class="post-excerpt"></p>
     <div id="post-content" class="post-content"></div>
     <div id="post-gallery" class="post-gallery"></div>
     <div class="post-cta">
-      <a href="https://wa.me/5562999999999?text=Vi%20essa%20mat%C3%A9ria%20no%20blog%20e%20queria%20saber%20mais" target="_blank" class="btn glow"><svg class="ic"><use href="#i-whatsapp"/></svg>Falar com a BLACKFIT</a>
+      <a href="https://wa.me/5562954410900?text=Vi%20essa%20mat%C3%A9ria%20no%20blog%20e%20queria%20saber%20mais" target="_blank" class="btn glow"><svg class="ic"><use href="#i-whatsapp"/></svg>Falar com a BLACKFIT</a>
       <a href="https://chat.whatsapp.com/SUBSTITUIR-PELO-LINK-DO-GRUPO" target="_blank" class="btn-vip"><svg class="ic"><use href="#i-crown"/></svg>Grupo VIP de Ofertas</a>
     </div>
   </div>
@@ -55,9 +55,9 @@
 
 <footer class="foot">
   <div class="links">
-    <a href="index.html">InÃ­cio</a><a href="blog.html">Blog</a><a href="contato.html">Contato</a>
+    <a href="index.html">Início</a><a href="blog.html">Blog</a><a href="contato.html">Contato</a>
   </div>
-  <p>Â© 2026 BLACKFIT Suplementos Â· HidrolÃ¢ndia Â· GO</p>
+  <p>© 2026 BLACKFIT Suplementos · Hidrolândia · GO</p>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
@@ -70,11 +70,11 @@ function paragraphs(s){return escapeHtml(s).split(/\n{2,}/).map(p=>`<p>${p.repla
 
 (async () => {
   const id = new URLSearchParams(location.search).get('id');
-  if (!id) { document.getElementById('post-title').textContent = 'Post nÃ£o encontrado'; return; }
+  if (!id) { document.getElementById('post-title').textContent = 'Post não encontrado'; return; }
   try {
     const p = await window.bfLoadPost(id);
     if (!p) throw 0;
-    document.getElementById('page-title').textContent = p.title + ' â€” BLACKFIT';
+    document.getElementById('page-title').textContent = p.title + ' — BLACKFIT';
     document.getElementById('post-title').textContent = p.title;
     document.getElementById('post-excerpt').textContent = p.excerpt || '';
     document.getElementById('post-date').textContent = new Date(p.created_at).toLocaleDateString('pt-BR',{day:'2-digit',month:'long',year:'numeric'});
@@ -89,15 +89,15 @@ function paragraphs(s){return escapeHtml(s).split(/\n{2,}/).map(p=>`<p>${p.repla
     ).join('');
     // Meta tags Open Graph p/ preview no WhatsApp/redes
     window.bfSetMeta({
-      title: p.title + ' â€” BLACKFIT',
+      title: p.title + ' — BLACKFIT',
       description: p.excerpt || (p.body || '').slice(0, 160),
       image: p.cover_url || (media[0] && media[0].type === 'image' ? media[0].url : null),
       url: location.href
     });
-    // Conta a visualizaÃ§Ã£o (rate-limited 30 min por IP+UA via RPC)
+    // Conta a visualização (rate-limited 30 min por IP+UA via RPC)
     window.bfBumpView(id);
   } catch {
-    document.getElementById('post-title').textContent = 'Post nÃ£o encontrado';
+    document.getElementById('post-title').textContent = 'Post não encontrado';
   }
 })();
 </script>
