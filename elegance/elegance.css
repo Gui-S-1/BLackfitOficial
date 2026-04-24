@@ -218,14 +218,18 @@ button{font:inherit;color:inherit;cursor:pointer;border:0;background:transparent
 }
 
 /* ============== LOGO IMAGEM ============== */
-.nav .logo .brand-logo{height:42px;width:auto;display:block}
+.nav .logo .brand-logo{height:60px;width:auto;display:block;object-fit:contain}
 .nav .logo .logo-fallback{display:flex;align-items:center;gap:12px}
 .hero-logo{
-  max-width:min(420px,72vw);height:auto;margin:0 auto 24px;
-  filter:drop-shadow(0 8px 24px rgba(201,123,145,.18));
+  max-width:min(560px,85vw);height:auto;margin:0 auto 28px;display:block;
+  filter:drop-shadow(0 12px 32px rgba(201,123,145,.25));
   animation:logoFloat 6s ease-in-out infinite;
 }
-@keyframes logoFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@keyframes logoFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@media(max-width:780px){
+  .nav .logo .brand-logo{height:46px}
+  .hero-logo{max-width:min(420px,88vw);margin-bottom:20px}
+}
 
 /* ============== VIDEOS ============== */
 .videos{padding:90px 0;background:linear-gradient(180deg,var(--bg) 0%,var(--pink-soft) 100%)}
