@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>Elegance Fitwear — Moda Fitness Feminina</title>
+  <meta name="description" content="Pelas que vestem o seu treino, valorizam o seu corpo e te acompanham o dia inteiro.">
+  <meta name="theme-color" content="#ffd1dc">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Elegance Fitwear">
+  <meta property="og:description" content="Moda fitness feminina que veste, valoriza e empodera.">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;0,700;1,400&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="elegance.css">
+</head>
+<body>
+
+<!-- ============== SVG SPRITE ============== -->
+<svg aria-hidden="true" style="position:absolute;width:0;height:0">
+  <defs>
+    <symbol id="i-zap" viewBox="0 0 24 24"><path d="M20.5 3.5A11 11 0 0 0 3 16.5L1.5 22l5.7-1.5A11 11 0 1 0 20.5 3.5z" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12z" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2" fill="none"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+<!-- ============== NAV ============== -->
+<header class="nav">
+  <a href="index.html" class="logo">
+    <span class="mark">E</span>
+    <span class="word">Elegance <em>Fitwear</em></span>
+  </a>
+  <nav class="links">
+    <a href="#colecao">Coleção</a>
+    <a href="#blog">Novidades</a>
+    <a href="#contato">Contato</a>
+  </nav>
+  <div class="cta">
+    <a href="https://wa.me/5562962267380" target="_blank" class="btn-zap"><svg class="ic"><use href="#i-zap"/></svg> Falar comigo</a>
+  </div>
+  <button class="hamb" id="ham" aria-label="Menu"><svg class="ic"><use href="#i-menu"/></svg></button>
+</header>
+
+<aside class="drawer" id="drawer">
+  <button class="close" id="close-drawer"><svg class="ic"><use href="#i-x"/></svg></button>
+  <a href="#colecao">Coleção</a>
+  <a href="#blog">Novidades</a>
+  <a href="#contato">Contato</a>
+  <a href="https://wa.me/5562962267380" target="_blank" class="btn-zap"><svg class="ic"><use href="#i-zap"/></svg> Falar comigo</a>
+</aside>
+
+<!-- ============== HERO ============== -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-shapes">
+    <span class="shape s1"></span>
+    <span class="shape s2"></span>
+    <span class="shape s3"></span>
+  </div>
+  <div class="hero-inner">
+    <span class="eyebrow reveal" data-cb="home.hero_eyebrow">Moda Fitness Feminina</span>
+    <h1 class="reveal delay-1">
+      <span class="serif" data-cb="home.hero_title">ELEGANCE FITWEAR</span>
+    </h1>
+    <p class="lead reveal delay-2" data-cb="home.hero_lead">
+      Peças que vestem o seu treino, valorizam o seu corpo e seguem com você o dia inteiro.
+    </p>
+    <div class="hero-cta reveal delay-3">
+      <a href="#blog" class="btn primary"><span data-cb="home.cta_primary">Conhecer a coleção</span> <svg class="ic"><use href="#i-arrow"/></svg></a>
+      <a href="https://wa.me/5562962267380" target="_blank" class="btn ghost"><svg class="ic"><use href="#i-zap"/></svg> <span data-cb="home.cta_secondary">Falar com a Joana</span></a>
+    </div>
+  </div>
+  <div class="scroll-hint"><span></span></div>
+</section>
+
+<!-- ============== ABOUT ============== -->
+<section class="about" id="colecao">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <span class="kicker">Elegance · 2026</span>
+        <h2 class="serif" data-cb="home.about_title">Sobre a Elegance</h2>
+        <p data-cb="home.about_text">Cada peça é escolhida pensando em você: tecidos que respiram, modelagem que valoriza, design que acompanha.</p>
+        <a href="https://wa.me/5562962267380" target="_blank" class="btn primary sm"><svg class="ic"><use href="#i-zap"/></svg> Ver catálogo no Zap</a>
+      </div>
+      <div class="about-img reveal delay-1">
+        <div class="img-frame"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== QUOTE ============== -->
+<section class="quote-band">
+  <p class="serif" data-cb="home.quote">Você não veste só uma roupa. Você veste atitude.</p>
+</section>
+
+<!-- ============== BLOG ============== -->
+<section class="blog" id="blog">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">Diário</span>
+      <h2 class="serif">Novidades & Lookbook</h2>
+      <p class="muted">As últimas notícias, lançamentos e dicas direto da Joana.</p>
+    </div>
+    <div class="post-grid" id="post-grid">
+      <div class="loading">Carregando…</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== CONTATO ============== -->
+<section class="contato" id="contato">
+  <div class="container narrow">
+    <span class="kicker reveal">Vamos conversar</span>
+    <h2 class="serif reveal delay-1">Bora montar o seu look?</h2>
+    <p class="muted reveal delay-2">Me chama no WhatsApp ou Instagram. Atendimento personalizado, do tamanho do seu jeito.</p>
+    <div class="contato-cta reveal delay-3">
+      <a href="https://wa.me/5562962267380" target="_blank" class="btn primary"><svg class="ic"><use href="#i-zap"/></svg> WhatsApp</a>
+      <a href="https://chat.whatsapp.com/B864ooWxaIICeBSbVhy1RK?mode=gi_t" target="_blank" class="btn ghost"><svg class="ic"><use href="#i-heart"/></svg> Grupo VIP</a>
+      <a href="https://instagram.com/elegance_fitwear" target="_blank" class="btn ghost"><svg class="ic"><use href="#i-ig"/></svg> Instagram</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FOOTER ============== -->
+<footer class="foot">
+  <p data-cb-tpl>© 2026 Elegance Fitwear · {{global.address_line}}</p>
+  <p class="muted" data-cb="global.footer_tagline">Moda fitness que veste, valoriza e empodera.</p>
+</footer>
+
+<!-- Selecionar marca antes de carregar bridge -->
+<script>window.BF_BRAND = 'elegance';</script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="../supabase-config.js"></script>
+<script src="../bf-supabase.js"></script>
+<script src="elegance.js"></script>
+<script>
+function escapeHtml(s){return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+async function loadPosts(){
+  const grid = document.getElementById('post-grid');
+  try{
+    const posts = await window.bfLoadPosts();
+    if(!posts.length){ grid.innerHTML = '<p class="empty">Em breve, novidades aqui ✨</p>'; return; }
+    grid.innerHTML = posts.map(p => `
+      <a class="post-card" href="post.html?id=${p.id}">
+        <div class="cover" style="${p.cover_url ? `background-image:url('${p.cover_url}')` : 'background:#fff0f4'}"></div>
+        <div class="body">
+          <span class="date">${new Date(p.created_at).toLocaleDateString('pt-BR',{day:'2-digit',month:'short',year:'numeric'})} · ${p.views||0} <svg class="ic" style="width:.85em"><use href="#i-eye"/></svg></span>
+          <h3>${escapeHtml(p.title)}</h3>
+          <p>${escapeHtml(p.excerpt || '').slice(0,140)}${(p.excerpt||'').length>140?'…':''}</p>
+          <span class="read">Ler mais <svg class="ic"><use href="#i-arrow"/></svg></span>
+        </div>
+      </a>
+    `).join('');
+  }catch(e){ grid.innerHTML = '<p class="empty">Erro ao carregar.</p>'; }
+}
+loadPosts();
+</script>
+</body>
+</html>

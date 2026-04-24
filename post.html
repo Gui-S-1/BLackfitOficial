@@ -4,6 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title id="page-title">Carregando… — BLACKFIT Blog</title>
+  <meta name="description" content="Blog BLACKFIT — performance, treino e suplementação.">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="BLACKFIT Blog">
+  <meta property="og:description" content="Performance, treino e suplementação.">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;700;900&family=Playfair+Display:ital,wght@1,400;1,700&family=Syne:wght@400;700;800;900&display=swap" rel="stylesheet">
@@ -80,6 +87,13 @@ function paragraphs(s){return escapeHtml(s).split(/\n{2,}/).map(p=>`<p>${p.repla
         ? `<video controls preload="metadata" src="${m.url}"></video>`
         : `<img src="${m.url}" loading="lazy">`
     ).join('');
+    // Meta tags Open Graph p/ preview no WhatsApp/redes
+    window.bfSetMeta({
+      title: p.title + ' — BLACKFIT',
+      description: p.excerpt || (p.body || '').slice(0, 160),
+      image: p.cover_url || (media[0] && media[0].type === 'image' ? media[0].url : null),
+      url: location.href
+    });
     // Conta a visualização (rate-limited 30 min por IP+UA via RPC)
     window.bfBumpView(id);
   } catch {
