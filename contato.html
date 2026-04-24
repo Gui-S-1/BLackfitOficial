@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Localização & Contato — BLACKFIT</title>
+  <meta name="description" content="Visite a BLACKFIT em Hidrolândia. Endereço, horários, mapa e WhatsApp para atendimento direto.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;700;900&family=Playfair+Display:ital,wght@1,400;1,700&family=Syne:wght@400;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <a href="index.html" class="brand"><img src="assets/IMG_6165.PNG" alt=""><span>BLACKFIT</span></a>
+  <nav class="links">
+    <a href="index.html">Início</a><a href="sobre.html">Sobre Nós</a><a href="suplementos.html">Suplementos</a><a href="roupas.html">Roupas Elegance</a><a href="blog.html">Blog</a><a href="contato.html">Localização</a>
+  </nav>
+  <div class="cta"><a href="https://wa.me/5562999999999" target="_blank" class="btn-zap green"><svg class="ic"><use href="#i-whatsapp"/></svg>Chamar no Zap</a><a href="https://chat.whatsapp.com/SUBSTITUIR-PELO-LINK-DO-GRUPO" target="_blank" rel="noopener" class="btn-vip"><svg class="ic"><use href="#i-crown"/></svg>Grupo VIP de Ofertas</a></div>
+  <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menu"><svg class="ic ic-lg"><use href="#i-menu"/></svg></button>
+</header>
+<aside class="drawer" id="drawer">
+  <span class="close" onclick="toggleMenu()"><svg class="ic ic-lg"><use href="#i-close"/></svg></span>
+  <a href="index.html">Início</a><a href="sobre.html">Sobre Nós</a><a href="suplementos.html">Suplementos</a><a href="roupas.html">Roupas Elegance</a><a href="blog.html">Blog</a><a href="contato.html">Localização</a>
+  <a href="https://wa.me/5562999999999" target="_blank" class="btn-zap green mt-2"><svg class="ic"><use href="#i-whatsapp"/></svg>WhatsApp</a><a href="https://chat.whatsapp.com/SUBSTITUIR-PELO-LINK-DO-GRUPO" target="_blank" rel="noopener" class="btn-vip"><svg class="ic"><use href="#i-crown"/></svg>Grupo VIP de Ofertas</a>
+</aside>
+
+<section class="hero">
+  <div class="video-bg">
+    <video class="bg-loop" autoplay muted playsinline loop preload="auto">
+      <source src="assets/add_a_smooth_202604240009.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="veil dark"></div>
+  <h2 class="blackfit-giant">BLACKFIT</h2>
+
+  <div class="hero-inner">
+    <span class="eyebrow reveal">Localização</span>
+    <h1 class="morph reveal delay-1">
+      A GENTE TE <span class="morph-word" data-morph="ESPERA|ATENDE|RECEBE|ABRAÇA">ESPERA</span>
+    </h1>
+    <p class="lead reveal delay-2">Loja física em Hidrolândia + atendimento full no WhatsApp. Escolha como você prefere ser atendido.</p>
+  </div>
+</section>
+
+<section class="sec-full" style="background:#070707">
+  <div class="contact-grid">
+    <div class="contact-card reveal left">
+      <div class="sec-title"><small>Fale Conosco</small>NOSSO <span class="stroke">PONTO</span></div>
+      <div class="info"><div class="ico"><svg class="ic"><use href="#i-map-pin"/></svg></div><div><strong>Endereço</strong><p>Black Fit Suplementos<br>Hidrolândia · GO</p></div></div>
+      <div class="info"><div class="ico"><svg class="ic"><use href="#i-whatsapp"/></svg></div><div><strong>WhatsApp</strong><p><a href="https://wa.me/5562999999999" target="_blank" style="color:#fff;border-bottom:1px solid #fff">(62) 99999-9999</a></p></div></div>
+      <div class="info"><div class="ico"><svg class="ic"><use href="#i-clock"/></svg></div><div><strong>Horário</strong><p>Seg–Sex · 08h às 20h<br>Sábado · 08h às 14h</p></div></div>
+      <div class="info"><div class="ico"><svg class="ic"><use href="#i-instagram"/></svg></div><div><strong>Instagram</strong><p>@blackfit.suplementos<br>@elegance.fitwear</p></div></div>
+      <div class="cta-row mt-3">
+        <a href="https://wa.me/5562999999999?text=Quero%20agendar%20uma%20visita" target="_blank" class="btn glow"><svg class="ic"><use href="#i-whatsapp"/></svg>Agendar visita</a><a href="https://chat.whatsapp.com/SUBSTITUIR-PELO-LINK-DO-GRUPO" target="_blank" rel="noopener" class="btn-vip"><svg class="ic"><use href="#i-crown"/></svg>Grupo VIP de Ofertas</a>
+        <a href="https://www.google.com/maps/place/Black+Fit+Suplementos/@-16.9672701,-49.2284504,19z/data=!4m6!3m5!1s0x935f036468882fff:0xd0c602d6ff59555c!8m2!3d-16.9672714!4d-49.2278067!16s%2Fg%2F11myf7r55s" target="_blank" class="btn"><svg class="ic"><use href="#i-map"/></svg>Abrir no Maps</a>
+      </div>
+    </div>
+    <div class="map-wrap reveal right">
+      <iframe src="https://www.google.com/maps?q=Black+Fit+Suplementos+Hidrol%C3%A2ndia&hl=pt-BR&z=17&output=embed" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<section style="padding:90px 24px;background:#000;text-align:center;position:relative;overflow:hidden;isolation:isolate">
+  <h2 class="blackfit-giant" style="opacity:.15">BLACKFIT</h2>
+  <div class="quote center reveal" style="position:relative;z-index:3">"O melhor momento pra começar foi ontem. O segundo melhor é agora — manda mensagem."</div>
+  <div class="cta-row mt-3" style="position:relative;z-index:3;justify-content:center">
+    <a href="https://wa.me/5562999999999?text=Quero%20come%C3%A7ar%20agora" target="_blank" class="btn glow reveal delay-1"><svg class="ic"><use href="#i-whatsapp"/></svg>Começar agora</a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="links"><a href="index.html">Início</a><a href="sobre.html">Sobre</a><a href="suplementos.html">Suplementos</a><a href="roupas.html">Elegance</a><a href="contato.html">Contato</a></div>
+  <p>© 2026 BLACKFIT Suplementos · Hidrolândia · GO</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="supabase-config.js"></script>
+<script src="bf-supabase.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
+

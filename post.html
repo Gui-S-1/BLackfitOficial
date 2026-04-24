@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title id="page-title">Carregando… — BLACKFIT Blog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;700;900&family=Playfair+Display:ital,wght@1,400;1,700&family=Syne:wght@400;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <a href="index.html" class="brand"><img src="assets/IMG_6165.PNG" alt=""><span>BLACKFIT</span></a>
+  <nav class="links">
+    <a href="index.html">Início</a><a href="sobre.html">Sobre Nós</a><a href="suplementos.html">Suplementos</a>
+    <a href="roupas.html">Roupas Elegance</a><a href="blog.html" class="active">Blog</a><a href="contato.html">Localização</a>
+  </nav>
+  <div class="cta">
+    <a href="https://wa.me/5562999999999" target="_blank" class="btn-zap green"><svg class="ic"><use href="#i-whatsapp"/></svg>Chamar no Zap</a>
+    <a href="https://chat.whatsapp.com/SUBSTITUIR-PELO-LINK-DO-GRUPO" target="_blank" class="btn-vip"><svg class="ic"><use href="#i-crown"/></svg>Grupo VIP</a>
+  </div>
+  <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menu"><svg class="ic ic-lg"><use href="#i-menu"/></svg></button>
+</header>
+
+<aside class="drawer" id="drawer">
+  <span class="close" onclick="toggleMenu()"><svg class="ic ic-lg"><use href="#i-close"/></svg></span>
+  <a href="index.html">Início</a><a href="sobre.html">Sobre</a><a href="suplementos.html">Suplementos</a>
+  <a href="roupas.html">Elegance</a><a href="blog.html">Blog</a><a href="contato.html">Localização</a>
+</aside>
+
+<article class="post-page">
+  <div class="post-cover" id="post-cover"></div>
+  <div class="post-body">
+    <a href="blog.html" class="post-back"><svg class="ic"><use href="#i-arrow"/></svg> Voltar pro Blog</a>
+    <span id="post-date" class="post-date"></span>
+    <h1 id="post-title">…</h1>
+    <p id="post-excerpt" class="post-excerpt"></p>
+    <div id="post-content" class="post-content"></div>
+    <div id="post-gallery" class="post-gallery"></div>
+    <div class="post-cta">
+      <a href="https://wa.me/5562999999999?text=Vi%20essa%20mat%C3%A9ria%20no%20blog%20e%20queria%20saber%20mais" target="_blank" class="btn glow"><svg class="ic"><use href="#i-whatsapp"/></svg>Falar com a BLACKFIT</a>
+      <a href="https://chat.whatsapp.com/SUBSTITUIR-PELO-LINK-DO-GRUPO" target="_blank" class="btn-vip"><svg class="ic"><use href="#i-crown"/></svg>Grupo VIP de Ofertas</a>
+    </div>
+  </div>
+</article>
+
+<footer class="foot">
+  <div class="links">
+    <a href="index.html">Início</a><a href="blog.html">Blog</a><a href="contato.html">Contato</a>
+  </div>
+  <p>© 2026 BLACKFIT Suplementos · Hidrolândia · GO</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="supabase-config.js"></script>
+<script src="bf-supabase.js"></script>
+<script src="script.js"></script>
+<script>
+function escapeHtml(s){return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function paragraphs(s){return escapeHtml(s).split(/\n{2,}/).map(p=>`<p>${p.replace(/\n/g,'<br>')}</p>`).join('')}
+
+(async () => {
+  const id = new URLSearchParams(location.search).get('id');
+  if (!id) { document.getElementById('post-title').textContent = 'Post não encontrado'; return; }
+  try {
+    const p = await window.bfLoadPost(id);
+    if (!p) throw 0;
+    document.getElementById('page-title').textContent = p.title + ' — BLACKFIT';
+    document.getElementById('post-title').textContent = p.title;
+    document.getElementById('post-excerpt').textContent = p.excerpt || '';
+    document.getElementById('post-date').textContent = new Date(p.created_at).toLocaleDateString('pt-BR',{day:'2-digit',month:'long',year:'numeric'});
+    if (p.cover_url) document.getElementById('post-cover').style.backgroundImage = `url('${p.cover_url}')`;
+    else document.getElementById('post-cover').style.display = 'none';
+    document.getElementById('post-content').innerHTML = paragraphs(p.body || '');
+    const media = (p.media || []);
+    document.getElementById('post-gallery').innerHTML = media.map(m =>
+      m.type === 'video'
+        ? `<video controls preload="metadata" src="${m.url}"></video>`
+        : `<img src="${m.url}" loading="lazy">`
+    ).join('');
+    // Conta a visualização (rate-limited 30 min por IP+UA via RPC)
+    window.bfBumpView(id);
+  } catch {
+    document.getElementById('post-title').textContent = 'Post não encontrado';
+  }
+})();
+</script>
+</body>
+</html>
