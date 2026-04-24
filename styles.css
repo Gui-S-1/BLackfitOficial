@@ -15,7 +15,7 @@
 }
 
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-html,body{background:var(--bg);color:var(--fg);scroll-behavior:smooth}
+html,body{background:var(--bg);color:var(--fg);scroll-behavior:smooth;overflow-x:clip;max-width:100vw}
 html{scroll-padding-top:80px}
 body{
   font-family:'Outfit',sans-serif;
@@ -23,6 +23,8 @@ body{
   overflow-x:hidden;
   line-height:1.5;
   -webkit-font-smoothing:antialiased;
+  width:100%;
+  position:relative;
 }
 a{color:inherit;text-decoration:none}
 img,video{display:block;max-width:100%}
@@ -115,6 +117,36 @@ img,video{display:block;max-width:100%}
 .drawer a{font-family:'Syne',sans-serif;font-size:1.1rem;letter-spacing:3px;text-transform:uppercase;
   padding:14px 0;border-bottom:1px solid var(--line)}
 .drawer .close{position:absolute;top:20px;right:24px;font-size:2rem;cursor:pointer}
+
+/* === Drawer mobile: botões zap/vip com look próprio === */
+.drawer .btn-zap,
+.drawer .btn-zap.green,
+.drawer .btn-vip{
+  font-family:'Syne',sans-serif;
+  font-size:.8rem;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  padding:14px 18px;
+  border-radius:60px;
+  border-bottom:0;
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  text-align:center;
+  transition:transform .25s, box-shadow .25s, background .25s;
+}
+.drawer .btn-zap,
+.drawer .btn-zap.green{
+  background:#25D366;color:#fff;border:1px solid rgba(37,211,102,.6);
+  box-shadow:0 8px 22px -8px rgba(37,211,102,.55);
+}
+.drawer .btn-zap:hover{transform:translateY(-2px);box-shadow:0 12px 28px -8px rgba(37,211,102,.7)}
+.drawer .btn-vip{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.25);
+  color:#fff;
+}
+.drawer .btn-vip:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.4)}
+.drawer .btn-zap .ic,.drawer .btn-vip .ic{margin:0}
+.drawer .mt-2{margin-top:14px}
 
 @media (max-width:1100px){
   .nav{padding:14px 20px}
