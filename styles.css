@@ -62,6 +62,34 @@ img,video{display:block;max-width:100%}
 .btn-zap:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(255,255,255,.15)}
 .btn-zap.green{background:#25D366;color:#fff}
 .btn-zap.green:hover{box-shadow:0 10px 30px rgba(37,211,102,.4)}
+
+/* === Navbar: botões translúcidos (glassmorphism) === */
+.nav .cta .btn-zap,
+.nav .cta .btn-zap.green{
+  background:rgba(37,211,102,.18);
+  color:#fff;
+  border:1px solid rgba(37,211,102,.45);
+  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
+  box-shadow:0 4px 18px rgba(37,211,102,.18), inset 0 1px 0 rgba(255,255,255,.08);
+}
+.nav .cta .btn-zap:hover{
+  background:rgba(37,211,102,.32);
+  border-color:rgba(37,211,102,.7);
+  box-shadow:0 8px 28px rgba(37,211,102,.4);
+}
+.nav .cta .btn-vip{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.18);
+  color:#fff;
+  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
+}
+.nav .cta .btn-vip:hover{
+  background:rgba(255,255,255,.12);
+  border-color:rgba(255,255,255,.35);
+  box-shadow:0 8px 28px rgba(255,255,255,.08);
+}
 .menu-toggle{display:none;font-size:1.6rem;cursor:pointer;background:none;border:none;color:#fff}
 
 /* Drawer mobile */

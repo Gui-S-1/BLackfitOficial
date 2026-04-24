@@ -216,3 +216,46 @@ button{font:inherit;color:inherit;cursor:pointer;border:0;background:transparent
   .post-card .body{padding:20px 22px 24px}
   .btn{padding:13px 24px;font-size:.82rem}
 }
+
+/* ============== LOGO IMAGEM ============== */
+.nav .logo .brand-logo{height:42px;width:auto;display:block}
+.nav .logo .logo-fallback{display:flex;align-items:center;gap:12px}
+.hero-logo{
+  max-width:min(420px,72vw);height:auto;margin:0 auto 24px;
+  filter:drop-shadow(0 8px 24px rgba(201,123,145,.18));
+  animation:logoFloat 6s ease-in-out infinite;
+}
+@keyframes logoFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+
+/* ============== VIDEOS ============== */
+.videos{padding:90px 0;background:linear-gradient(180deg,var(--bg) 0%,var(--pink-soft) 100%)}
+.video-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:22px;margin-top:48px;
+}
+.video-card{
+  background:#fff;border-radius:var(--rad-lg);overflow:hidden;
+  box-shadow:0 12px 40px -16px rgba(201,123,145,.25);
+  border:1px solid var(--line);transition:transform var(--t),box-shadow var(--t);
+}
+.video-card:hover{transform:translateY(-4px);box-shadow:0 20px 50px -16px rgba(201,123,145,.4)}
+.video-card video{width:100%;aspect-ratio:9/16;object-fit:cover;background:#000;display:block}
+.video-card .vbody{padding:14px 18px}
+.video-card .vbody strong{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--ink)}
+.video-grid .empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:40px;font-style:italic}
+
+/* ============== LOCAL / MAPA ============== */
+.local{padding:90px 0;background:var(--bg-2)}
+.local-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:48px;align-items:center}
+.local-info h2{font-size:clamp(2rem,4vw,2.6rem);margin:8px 0 16px}
+.local-info .muted{font-size:1.05rem;margin-bottom:24px}
+.local-cta{display:flex;gap:12px;flex-wrap:wrap}
+.local-map{height:380px;border-radius:var(--rad-lg);overflow:hidden;box-shadow:0 20px 60px -20px rgba(201,123,145,.3)}
+.local-map iframe{filter:saturate(.85) hue-rotate(-8deg)}
+@media(max-width:780px){
+  .local-grid{grid-template-columns:1fr}
+  .local-map{height:300px}
+  .video-grid{grid-template-columns:1fr 1fr;gap:14px}
+}
+@media(max-width:480px){
+  .video-grid{grid-template-columns:1fr}
+}

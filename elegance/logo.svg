@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 760" width="760" height="760">
+  <defs>
+    <style>
+      .gold { fill: #c9a96a; font-family: 'Cormorant Garamond', 'Times New Roman', serif; font-weight: 500; letter-spacing: 6px; }
+      .pink { fill: #f4a8b8; font-family: 'Cormorant Garamond', 'Times New Roman', serif; font-weight: 400; letter-spacing: 18px; }
+      .rule { stroke: #f4a8b8; stroke-width: 4; stroke-linecap: round; }
+    </style>
+  </defs>
+  <text x="380" y="395" text-anchor="middle" class="gold" font-size="120">ELEGANCE</text>
+  <line x1="170" y1="445" x2="290" y2="445" class="rule"/>
+  <line x1="470" y1="445" x2="590" y2="445" class="rule"/>
+  <text x="380" y="500" text-anchor="middle" class="pink" font-size="56">FITWEAR</text>
+</svg>
