@@ -64,7 +64,10 @@
   function renderTpl(s) {
     return String(s).replace(/\{\{\s*([a-z_.]+)\s*\}\}/gi, (_, k) => {
       const v = cache.blocks[k] ?? cache.blocks['global.' + k] ?? cache.blocks[PAGE + '.' + k];
-      return v == null ? '' : String(v).replace(/[<>]/g, c => ({'<':'&lt;','>':'&gt;'}[c]));
+      // escape HTML completo: tags + atributos
+      return v == null ? '' : String(v).replace(/[&<>"'`=\/]/g, c => ({
+        '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;','`':'&#96;','=':'&#61;','/':'&#47;'
+      }[c]));
     });
   }
   window.bfApplyBlocks = applyBlocks;
